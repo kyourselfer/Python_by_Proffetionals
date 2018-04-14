@@ -44,17 +44,15 @@ list1.append('Python')
 print(list1[0], list1[len(list1) - 1])
 print(list1[1:4])
 print(len(list1))
-# try:
-#     list2 = [x for x in list1 if x == int(x)]
-#     print(list2)
-# except TypeError:
-#     print('type')
-
-# for x in list1:
-#     if x == 6:
-#         print(list1.index(x))
-
-str1 = [2, 3, 4, 5, 6, 7]
-
-for x in str1:
-    print(x, x.isdigit())
+list1d = []
+try:
+    for x in list1:
+        list1 = [str(x) for x in list1]
+        list1d = [x for x in list1 if x.isdigit()]
+except TypeError:
+    print('TypeError!')
+print('current list is:', list1d)
+print([list1.index(fn) for fn in list1 if fn == '6'])
+print(list1)
+list1.remove(list1[(len(list1)-1)])
+print('Result is:', list1)
