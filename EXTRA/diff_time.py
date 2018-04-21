@@ -1,6 +1,7 @@
 if __name__ == '__main__':
     import time
 #
+#
 s1 = time.time()
 # a = 0
 # while a != 100000000:
